@@ -109,7 +109,6 @@ class Net(object):
 
         """
         #TODO: self.inp=np.asfarray(inp)?
-        
         self.inp = inp
         for nl, nums in enumerate(self.connect):
             if len(nums) > 1:
