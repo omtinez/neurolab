@@ -32,7 +32,7 @@ Delta rule
 
 """
 
-from . import gd, spo, wta, lvq, delta
+from . import ga, gd, spo, wta, lvq, delta
 import functools
 
 def trainer(Train):
@@ -65,3 +65,5 @@ train_wta = trainer(wta.TrainWTA)
 train_cwta = trainer(wta.TrainCWTA)
 train_lvq = trainer(lvq.TrainLVQ)
 train_delta = trainer(delta.TrainDelta)
+
+train_ga = trainer(ga.TrainGA)

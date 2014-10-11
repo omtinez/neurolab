@@ -2,10 +2,6 @@
 import numpy as np
 import neurolab.tool as tool
 from neurolab.core import TrainStop
-
-
-
-        
         
 class TrainWTA(Train):
     """ 

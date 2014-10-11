@@ -43,7 +43,7 @@ from . import init
 import numpy as np
 
 
-def newff(minmax, size, transf=None, trainf=train.train_bfgs):
+def newff(minmax, size, transf=None, trainf=train.train_gd):
     """
     Create multilayer perceptron
 

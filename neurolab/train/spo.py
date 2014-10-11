@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Train algorithm based on spipy.optimize
 
@@ -189,7 +188,6 @@ class TrainBH(TrainSO):
         self.kwargs['niter'] = self.epochs
 		
         def customcallback(xtrial, energy_trial, accept):
-            print(xtrial)
             self.step(xtrial)
 		
         x = basinhopping(self.fcn, self.x.copy(), callback=customcallback, **self.kwargs).x
