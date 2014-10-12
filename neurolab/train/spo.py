@@ -185,10 +185,13 @@ class TrainBH(TrainSO):
         from scipy.optimize import basinhopping
         if 'disp' not in self.kwargs:
             self.kwargs['disp'] = 0
+        self.kwargs['interval'] = 5
+        self.kwargs['stepsize'] = 0.1
         self.kwargs['niter'] = self.epochs
 		
-        def customcallback(xtrial, energy_trial, accept):
-            self.step(xtrial)
+        def customcallback(x_trial, energy_trial, accept):
+            self.step(x_trial)
+            return False
 		
         x = basinhopping(self.fcn, self.x.copy(), callback=customcallback, **self.kwargs).x
         self.x[:] = x

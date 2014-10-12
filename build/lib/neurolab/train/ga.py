@@ -63,7 +63,7 @@ class TrainGA(Train):
 
         toolbox.register("evaluate", evalOneMax)
         toolbox.register("mate", tools.cxBlend)
-        toolbox.register("mutate", tools.mutGaussian, mu=0.0, sigma=0.2, indpb=0.05)
+        toolbox.register("mutate", tools.mutGaussian, mu=0.0, sigma=0.05, indpb=0.05)
         toolbox.register("select", tools.selTournament, tournsize=3)
 
         pop = toolbox.population(n=100)
